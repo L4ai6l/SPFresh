@@ -27,6 +27,7 @@
 
 #include <functional>
 #include <shared_mutex>
+#include <mutex>
 
 namespace SPTAG
 {

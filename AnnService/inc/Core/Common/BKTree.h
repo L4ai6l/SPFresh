@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <shared_mutex>
+#include <mutex>
 
 #include "inc/Core/VectorIndex.h"
 
@@ -479,6 +480,8 @@ TryClustering<T, Type>(data, indices, first, last, args, samples, lambdaFactor, 
 break;
 
 #include "inc/Core/DefinitionList.h"
+#include <mutex>
+#include <shared_mutex>
 #undef DefineVectorValueType
 
                 default: break;

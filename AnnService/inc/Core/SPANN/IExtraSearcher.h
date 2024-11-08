@@ -15,6 +15,7 @@
 #include <chrono>
 #include <atomic>
 #include <set>
+#include <mutex>
 
 namespace SPTAG {
     namespace SPANN {

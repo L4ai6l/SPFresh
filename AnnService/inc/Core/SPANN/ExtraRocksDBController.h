@@ -19,6 +19,7 @@
 #include <cmath>
 #include <climits>
 #include <future>
+#include <mutex>
 
 namespace SPTAG::SPANN
 {

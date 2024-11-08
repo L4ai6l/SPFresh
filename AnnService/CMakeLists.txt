@@ -44,6 +44,7 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
     target_compile_options(DistanceUtils PRIVATE -mavx2 -mavx -msse -msse2 -mavx512f -mavx512bw -mavx512dq -fPIC)
 endif()
 
+set(RocksDB_DIR "~/software/rocksdb/lib/cmake/rocksdb")
 find_package(RocksDB CONFIG)
 if((DEFINED RocksDB_DIR) AND RocksDB_DIR)
     list(APPEND RocksDB_LIBRARIES RocksDB::rocksdb)

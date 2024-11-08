@@ -8,6 +8,7 @@
 #include "inc/Helper/StringConvert.h"
 #include "inc/Helper/CommonHelper.h"
 #include <string>
+#include <mutex>
 
 namespace SPTAG {
     namespace SPANN {

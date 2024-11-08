@@ -915,15 +915,17 @@ namespace SPTAG
             auto t4 = std::chrono::high_resolution_clock::now();
             double buildSSDTime = std::chrono::duration_cast<std::chrono::seconds>(t4 - t3).count();
             LOG(Helper::LogLevel::LL_Info, "select head time: %.2lfs build head time: %.2lfs build ssd time: %.2lfs\n", selectHeadTime, buildHeadTime, buildSSDTime);
-
-            if (m_options.m_deleteHeadVectors) {
+            m_options.m_deleteHeadVectors = false;
+            if (m_options.m_deleteHeadVectors)
+            {
                 if (fileexists((m_options.m_indexDirectory + FolderSep + m_options.m_headVectorFile).c_str()) &&
                     remove((m_options.m_indexDirectory + FolderSep + m_options.m_headVectorFile).c_str()) != 0) {
                     LOG(Helper::LogLevel::LL_Warning, "Head vector file can't be removed.\n");
                 }
             }
-
             m_bReady = true;
+            LOG(Helper::LogLevel::LL_Info, "return Success!");
+            
             return ErrorCode::Success;
         }
 

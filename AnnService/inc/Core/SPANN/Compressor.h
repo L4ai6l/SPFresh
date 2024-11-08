@@ -10,6 +10,7 @@
 #include <zstd.h>
 #include <zdict.h>
 #include "inc/Core/Common.h"
+#include <mutex>
 
 namespace SPTAG
 {

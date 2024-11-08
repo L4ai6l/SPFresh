@@ -1,5 +1,6 @@
 #include "inc/Helper/KeyValueIO.h"
 #include <atomic>
+#include <mutex>
 
 namespace SPTAG {
     namespace SPANN {

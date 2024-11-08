@@ -23,6 +23,7 @@
 #include <utility>
 #include <random>
 #include <tbb/concurrent_hash_map.h>
+#include <mutex>
 
 #ifdef ROCKSDB
 #include "ExtraRocksDBController.h"
